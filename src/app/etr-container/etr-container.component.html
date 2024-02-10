@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="KRA-ETR_LOGIN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRA ETR LOGIN</title>
+    <link rel="icon" type="kra_logo" href="kra_logo.png">
+</head>
+<body>
+    <div class="form-box" ng-controller="FormController"> 
+        <div class="page">
+            <div class="container">
+                <div class="header">
+                    <img src="kra_logo.jpg" alt="KRA Logo">
+                    <h1>Ushuru Smart</h1>
+                </div>
+
+                <div class="content">
+                    <h2>SIGN IN</h2>
+                    
+                    <label for="username">Username</label>
+                    <br>
+                    <input type="text" id="username" placeholder="First name and last name">
+                    <br>
+                    <label for="password">Password</label>
+                    <br>
+                    <input type="password" id="password" placeholder="At least 12 characters">
+                    <br>
+                    <br>
+                    <button id="signinButton">SIGNIN</button>
+                    <br>
+                    <p id="message" class="error-message"></p> <!-- Added class for error message -->
+                    <p><a href="#" id="forgotPassword">Forgot Password?</a></p>
+                    <p><a href="#" id="adminLogin">Is Admin? Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
+

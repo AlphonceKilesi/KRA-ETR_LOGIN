@@ -1,8 +1,6 @@
-
-
 body {
-    background-color: rgb(250, 24, 24);
-    color: red;
+    background-color: white;
+    color: #000000;
     font-family: 'Arial', sans-serif;
     display: flex;
     align-items: center;
@@ -12,17 +10,16 @@ body {
 }
 
 .container {
-    background-color: red;
-    border: 2px solid red;
-    padding: 20px;
-    text-align: center
-
+    background-color: white;
+    border: none;
+    padding: 100px;
+    text-align: center;
 }
 
 button {
-    background-color: white;
-    color: red;
-    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    padding: 7px 65px;
     border: none;
     cursor: pointer;
 }
@@ -36,21 +33,24 @@ button:hover {
 .user-page {
     display: none;
     margin-top: 20px;
-
 }
 
 .admin-page {
     background-color: white;
     color: red;
     padding: 10px;
-
 }
 
 .user-page {
     background-color: white;
     color: red;
     padding: 10px;
-    
+}
+
+/* Add space between input elements */
+input[type="text"],
+input[type="password"] {
+    margin-bottom: 10px; /* Adjust this value as needed */
 }
 
 .form-box {
@@ -60,9 +60,7 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: red;
+    background: white;
     padding: 50px 60px 70px;
     text-align: center;
-    
 }
-
