@@ -12,31 +12,35 @@
             <div class="container">
                 <div class="header">
                     <img src="./assets/kra_logo.jpg" alt="KRA Logo">
+                    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
                     <h1>Ushuru Smart</h1>
                 </div>
 
-                <div class="content">
+                <div class="wrapper">
                     <h2>SIGN IN</h2>
-                    
-                    <label for="username">Username</label>
-                    <br>
-                    <input type="text" id="username" placeholder="First name and last name">
-                    <br>
-                    <label for="password">Password</label>
-                    <br>
-                    <input type="password" id="password" placeholder="At least 12 characters">
-                    <br>
-                    <br>
-                    <button id="signinButton">SIGNIN</button>
-                    <br>
-                    <p id="message" class="error-message"></p> 
-                    <p><a href="#" id="forgotPassword">Forgot Password?</a></p>
-                    <p><a href="#" id="adminLogin">Is Admin? Login here</a></p>
+                    <div class="input-box">
+                        <input type="text" placeholder=" Username(First name and Last name)"  required>
+                        <i class='bx bxs-user-circle'></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder= "Password(Atleast 8 Characters)"  required >
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+                   
+                    <button type="submit" class="btn">SIGNIN</button>
+                    <div class="forgot-Password"><br>
+                        <a href="a">Is Admin? Login here</a><br>
+                        <a href="a">Forgot password?</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    
+    <script src="script.js"></script>
 </body>
 </html>
+
+
+                    
+                    
+                    
