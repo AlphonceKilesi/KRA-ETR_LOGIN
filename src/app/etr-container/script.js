@@ -1,60 +1,39 @@
 const form = document.getElementById('myForm');
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
+const adminLink = document.querySelector('.forgot-Password a:first-child');
 
+// Form validation
 form.addEventListener('submit', function(event) {
-  event.preventDefault();
-
   let hasError = false;
 
-
+  // Username validation
   if (usernameInput.value.trim() === '') {
     hasError = true;
-    usernameInput.classList.add('error');
-    document.getElementById('username_error').style.display = 'block';
+    // Add error message for empty username
   } else if (!/^[a-zA-Z ]+$/.test(usernameInput.value)) {
     hasError = true;
-    usernameInput.classList.add('error');
-    document.getElementById('username_error').style.display = 'block';
-    document.getElementById('username_error').textContent = 'Username must only contain letters and spaces.';
-  } else if (usernameInput.value.length < 4) {
-    hasError = true;
-    usernameInput.classList.add('error');
-    document.getElementById('username_error').style.display = 'block';
-    document.getElementById('username_error').textContent = 'Username must be at least 4 characters long.';
-  } else {
-    usernameInput.classList.remove('error');
-    document.getElementById('username_error').style.display = 'none';
+    // Add error message for invalid username format (not just letters and spaces)
   }
 
-  
+  // Password validation
   if (passwordInput.value.trim() === '') {
     hasError = true;
-    passwordInput.classList.add('error');
-    document.getElementById('pass_error').style.display = 'block';
+    // Add error message for empty password
   } else if (passwordInput.value.length < 8) {
     hasError = true;
-    passwordInput.classList.add('error');
-    document.getElementById('pass_error').style.display = 'block';
-    document.getElementById('pass_error').textContent = 'Password must be at least 8 characters long!';
-  } else {
-    passwordInput.classList.remove('error');
-    document.getElementById('pass_error').style.display = 'none';
+    // Add error message for password less than 8 characters
   }
 
-  
+  // ... (add additional checks if needed)
+
   if (hasError) {
-    event.preventDefault(); 
+    event.preventDefault();
+    // Highlight error fields or display a general error message
   }
 });
 
-function switchToAdminLogin() {
-  const adminLink = document.querySelector('a[onclick="switchToAdminLogin()"]');
-  const form = document.getElementById('myForm');
-
-  
+// Hide admin link on click
+adminLink.addEventListener('click', function() {
   adminLink.style.display = 'none';
-
-  
-
-}
+});
